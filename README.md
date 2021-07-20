@@ -23,4 +23,27 @@ En la tabla se puede definir el protocolo
 Definir lo IP autorizados a ingresar
 Se define el tipo de protocolo
 
+SSH TCP 22 Custom
+HTTP  TCP 80  Anywhere
+HTTPS TCP 442 Anywhere
+Custom TCP  3000  Anywhere
+
+Review and Launch
+
+Step 7: Review Instance Launch
+
+Launch
+
+
+Select an existing key pair or create a new key pair
+
+
+Choose an existing key pair => Create a new key pair  
+key pair name => "Se coloca el nombre"
+Download Key
+
+Launch Instance.
+
+
+Por medio del protocolo SSH conectaremos a esta IP "Public IPv4 address"
 
