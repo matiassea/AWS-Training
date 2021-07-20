@@ -20,6 +20,7 @@ Security group name: => Grupo e usuarios que entraran a esta instancia
 Description:
 
 En la tabla se puede definir el protocolo
-Definir lo IP autorizados a 
+Definir lo IP autorizados a ingresar
+Se define el tipo de protocolo
 
 
