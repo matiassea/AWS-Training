@@ -1,0 +1,66 @@
+### Configuracion del EC2
+
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install python3
+
+sudo apt-get install xfce4
+sudo apt-get install xfce4 xfce4-goodies
+
+sudo apt-add-repository ppa:x2go/stable
+sudo apt-get update
+sudo apt-get install x2goserver x2goserver-xsession
+
+sudo apt-get install xrdp -y
+sudo systemctl enable xrdp
+sudo systemctl status xrdp
+
+sudo apt-get install firefox
+
+usuario es "ubuntu"
+sudo passwd ubuntu => marichiweu
+
+git --version => verificacion de instalacion de git
+
+### Nunca se probo la opcion de tasksel
+tasksel
+seleccionar "ubuntu desktop"
+
+
+### Pagina donde resulto la configuracion
+
+
+https://dev.to/easyawslearn/how-to-setup-gui-on-amazon-ec2-ubuntu-server-4mgn
+1) EC2 Instance running with Ubuntu AMI
+2) Security Group allow inbound traffic for SSH (22) and RDP (3389) port
+
+Steps to Configure
+
+Step 1: Connect to the EC2 Instance through ssh (you can use putty for windows)
+
+Step 2: Update Ubuntu and install lxde using the following command
+
+sudo apt-get update -y
+
+sudo apt-get install lxde -y
+
+Step 3: Install xrdp to establish a remote desktop connection, using the below command you can install xrdp
+
+sudo apt-get install xrdp -y
+
+Step 4: set password for ubuntu user which uses for connect using Remote Desktop
+
+sudo passwd ubuntu
+
+Step 5: Take EC2 instance Public Ip or DNS and access though remote Desktop
+
+### Observaciones varias
+
+Para ver que desktop tengo => ls /usr/bin/*session
+x2go download, es solo para windows
+https://wiki.x2go.org/doku.php
+instalar, next next
+host => Public IPv4 address
+usar claves RSA/DSA para la conexion ssh => key .pem
+
+Usuario => ubuntu
+
