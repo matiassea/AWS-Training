@@ -24,27 +24,33 @@ connection, data, auth => private key file for authentication (se adjunta llave 
 
 sudo apt-get update && sudo apt-get upgrade
 
-###Para instalar lxde, este se ocupara, asi en X2GO se selecciona LXDE
+###Instalar lxde, este se ocupara, asi en X2GO se selecciona LXDE
 sudo apt-get install lxde -y
 Se elige el lightdm
 
-###Para instalar XFCE4, no se ocupara, se ocupara un GUI mas liviano
-sudo apt-get install xfce4 (NO)
-sudo apt-get install xfce4 xfce4-goodies (NO)
+###Instalar XFCE4, no se ocupara, se ocupara un GUI mas liviano
+sudo apt-get install xfce4 (No aplicar)
+sudo apt-get install xfce4 xfce4-goodies (No aplicar)
 
 https://comtechies.com/how-to-set-up-gui-on-amazon-ec2-ubuntu-server.html
-sudo apt-add-repository ppa:x2go/stable (no es seguro, ya que es solo para ubuntu) https://www.addictivetips.com/ubuntu-linux-tips/set-up-x2go-on-linux/ 
+sudo apt-add-repository ppa:x2go/stable (no es seguro, ya que es solo para ubuntu) https://www.addictivetips.com/ubuntu-linux-tips/set-up-x2go-on-linux/  (No aplicar)
+
+###Instalacion de X2GOSERVER
 sudo apt-get update
 sudo apt-get install x2goserver x2goserver-xsession -y => instalacion de X2GO en el servidor
 
-###XRDP => Escritorio remoto de microsoft
+### Por revisar
+https://stackoverflow.com/questions/25657596/how-to-set-up-gui-on-amazon-ec2-ubuntu-server
+
+###Instalar XRDP => Escritorio remoto de microsoft
 https://clouding.io/hc/es/articles/360010657540-C%C3%B3mo-instalar-y-configurar-XRDP-en-Ubuntu
 
 sudo apt-get install xrdp -y
-sudo systemctl enable xrdp (NO)
-sudo systemctl status xrdp (NO)
-sudo shutdown -r now (NO)
+sudo systemctl enable xrdp (No aplicar)
+sudo systemctl status xrdp (No aplicar)
+sudo shutdown -r now (No aplicar)
 
+###Creacion de passwordInstalar XRDP => Escritorio remoto de microsoft
 usuario es "ubuntu"
 sudo passwd ubuntu => marichiweu
 
