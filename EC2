@@ -41,6 +41,8 @@ sudo apt-get install x2goserver x2goserver-xsession -y => instalacion de X2GO en
 
 ### Por revisar
 https://stackoverflow.com/questions/25657596/how-to-set-up-gui-on-amazon-ec2-ubuntu-server
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-remote-desktop-with-x2go-on-ubuntu-20-04-es
+
 
 ###Instalar XRDP => Escritorio remoto de microsoft
 https://clouding.io/hc/es/articles/360010657540-C%C3%B3mo-instalar-y-configurar-XRDP-en-Ubuntu
