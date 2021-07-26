@@ -1,33 +1,58 @@
+para crear instancia EC2
+Launch Instance
+Step 1: Choose AMI => Ubuntu Server 20.04 LTS (HVM), SSD Volume Type (Free tier elegible) Next
+Step 2: Choose an Instance Type => (Free tier elegible) Next
+Step 3: Configure Instance Details => Next
+Step 4: Add Storage => Next
+Step 5: Add Tags => Next
+
+Security group name=> Colocar nombre
+Configurar protocolo y puerto
+Escritorio remoto => RDP TCP 3389
+SSH => TCP 22
+HTTP => TCP 80
+HTTP => TCP 443
+Utilizar la llave o crear una nueva
+
+En Putty
+Session => "Host Name" => ubuntu@18.191.175.33
+Session => Puerto => 22
+connection => Seconds between keepalives => 180
+connection, data, auth => private key file for authentication (se adjunta llave en .ppk) 
+
 ### Configuracion del EC2
 
 sudo apt-get update && sudo apt-get upgrade
 
 ###Para instalar lxde, este se ocupara, asi en X2GO se selecciona LXDE
 sudo apt-get install lxde -y
+Se elige el lightdm
 
-###Para instalar XFCE4, no se ocupara
+###Para instalar XFCE4, no se ocupara, se ocupara un GUI mas liviano
 sudo apt-get install xfce4 (NO)
 sudo apt-get install xfce4 xfce4-goodies (NO)
 
 https://comtechies.com/how-to-set-up-gui-on-amazon-ec2-ubuntu-server.html
 sudo apt-add-repository ppa:x2go/stable (no es seguro, ya que es solo para ubuntu) https://www.addictivetips.com/ubuntu-linux-tips/set-up-x2go-on-linux/ 
 sudo apt-get update
-sudo apt-get install x2goserver x2goserver-xsession => instalacion de X2GO en el servidor
+sudo apt-get install x2goserver x2goserver-xsession -y => instalacion de X2GO en el servidor
 
 ###XRDP => Escritorio remoto de microsoft
 https://clouding.io/hc/es/articles/360010657540-C%C3%B3mo-instalar-y-configurar-XRDP-en-Ubuntu
 
 sudo apt-get install xrdp -y
-sudo systemctl enable xrdp
-sudo systemctl status xrdp
-sudo shutdown -r now
+sudo systemctl enable xrdp (NO)
+sudo systemctl status xrdp (NO)
+sudo shutdown -r now (NO)
+
+usuario es "ubuntu"
+sudo passwd ubuntu => marichiweu
 
 ###Programas
 sudo apt-get install python3
 sudo apt-get install firefox
-
-usuario es "ubuntu"
-sudo passwd ubuntu => marichiweu
+sudo apt-get install screenfetch o sudo pacman -S screenfetch
+ejecutar screenfetch
 
 ###Instalacion en X2GO en el cliente.
 sudo apt-get install x2goclient
