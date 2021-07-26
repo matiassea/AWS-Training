@@ -1,25 +1,41 @@
 ### Configuracion del EC2
 
 sudo apt-get update && sudo apt-get upgrade
-sudo apt-get install python3
 
-sudo apt-get install xfce4
-sudo apt-get install xfce4 xfce4-goodies
+###Para instalar lxde, este se ocupara, asi en X2GO se selecciona LXDE
+sudo apt-get install lxde -y
 
-sudo apt-add-repository ppa:x2go/stable
+###Para instalar XFCE4, no se ocupara
+sudo apt-get install xfce4 (NO)
+sudo apt-get install xfce4 xfce4-goodies (NO)
+
+https://comtechies.com/how-to-set-up-gui-on-amazon-ec2-ubuntu-server.html
+sudo apt-add-repository ppa:x2go/stable (no es seguro, ya que es solo para ubuntu) https://www.addictivetips.com/ubuntu-linux-tips/set-up-x2go-on-linux/ 
 sudo apt-get update
-sudo apt-get install x2goserver x2goserver-xsession
+sudo apt-get install x2goserver x2goserver-xsession => instalacion de X2GO en el servidor
+
+###XRDP => Escritorio remoto de microsoft
+https://clouding.io/hc/es/articles/360010657540-C%C3%B3mo-instalar-y-configurar-XRDP-en-Ubuntu
 
 sudo apt-get install xrdp -y
 sudo systemctl enable xrdp
 sudo systemctl status xrdp
+sudo shutdown -r now
 
+###Programas
+sudo apt-get install python3
 sudo apt-get install firefox
 
 usuario es "ubuntu"
 sudo passwd ubuntu => marichiweu
 
+###Instalacion en X2GO en el cliente.
+sudo apt-get install x2goclient
+
+
 git --version => verificacion de instalacion de git
+https://sysads.co.uk/2014/02/03/connect-ubuntu-server-13-10-amazon-ec2-xrdp/
+
 
 ### Nunca se probo la opcion de tasksel
 tasksel
