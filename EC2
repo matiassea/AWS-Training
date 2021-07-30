@@ -58,13 +58,20 @@ sudo passwd ubuntu => marichiweu
 
 ###Programas
 sudo apt-get install python3
-sudo apt-get install firefox
+sudo apt-get install python3-pip -y
+sudo apt-get install firefox -y
 sudo apt-get install screenfetch o sudo pacman -S screenfetch
 ejecutar screenfetch
 
 ###Instalacion en X2GO en el cliente.
 sudo apt-get install x2goclient
 
+###PIP
+# pip install packageName
+# pip uninstall packageName
+# pip search packageName
+Extraccion de librerias pip freeze > requirements.txt
+Instalacion de librerias pip install -r requirements.txt
 
 git --version => verificacion de instalacion de git
 https://sysads.co.uk/2014/02/03/connect-ubuntu-server-13-10-amazon-ec2-xrdp/
