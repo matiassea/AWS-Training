@@ -29,7 +29,9 @@ sudo apt-get install lxde -y
 Se elige el lightdm
 
 ###Instalar XFCE4, no se ocupara, se ocupara un GUI mas liviano
-sudo apt-get install xfce4 (No aplicar)
+sudo apt-get install xfce4 -y
+Se elige el lightdm
+
 sudo apt-get install xfce4 xfce4-goodies (No aplicar)
 
 https://comtechies.com/how-to-set-up-gui-on-amazon-ec2-ubuntu-server.html
@@ -47,7 +49,7 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-remote-desktop-
 ###Instalar XRDP => Escritorio remoto de microsoft
 https://clouding.io/hc/es/articles/360010657540-C%C3%B3mo-instalar-y-configurar-XRDP-en-Ubuntu
 
-sudo apt-get install xrdp -y
+sudo apt-get install xrdp -y (solo si se quiere por escritorio remoto de windows)
 sudo systemctl enable xrdp (No aplicar)
 sudo systemctl status xrdp (No aplicar)
 sudo shutdown -r now (No aplicar)
@@ -60,7 +62,7 @@ sudo passwd ubuntu => marichiweu
 sudo apt-get install python3
 sudo apt-get install python3-pip -y
 sudo apt-get install firefox -y
-sudo apt-get install screenfetch o sudo pacman -S screenfetch
+sudo apt-get install screenfetch -y o sudo pacman -S screenfetch
 ejecutar screenfetch
 
 ###Instalacion en X2GO en el cliente.
