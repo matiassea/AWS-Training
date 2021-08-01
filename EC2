@@ -38,6 +38,7 @@ https://comtechies.com/how-to-set-up-gui-on-amazon-ec2-ubuntu-server.html
 sudo apt-add-repository ppa:x2go/stable (no es seguro, ya que es solo para ubuntu) https://www.addictivetips.com/ubuntu-linux-tips/set-up-x2go-on-linux/  (No aplicar)
 
 ###Instalacion de X2GOSERVER
+sudo apt-add-repository ppa:x2go/stable
 sudo apt-get update
 sudo apt-get install x2goserver x2goserver-xsession -y => instalacion de X2GO en el servidor
 
@@ -65,6 +66,21 @@ sudo apt-get install firefox -y
 sudo apt-get install screenfetch -y o sudo pacman -S screenfetch
 ejecutar screenfetch
 
+#Instalacion de VIM
+instalar
+´´´
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+´´´
+abrir VIM
+$echo $HOME => para ver la carpeta donde se instala el .vimrc
+touch .vimrc
+copy and paste el VIMRC
+grabar y cerrar
+abrir
+:PluginInstall
+
+
+
 ###Instalacion en X2GO en el cliente.
 sudo apt-get install x2goclient
 
@@ -77,11 +93,6 @@ Instalacion de librerias pip install -r requirements.txt
 
 git --version => verificacion de instalacion de git
 https://sysads.co.uk/2014/02/03/connect-ubuntu-server-13-10-amazon-ec2-xrdp/
-
-
-### Nunca se probo la opcion de tasksel
-tasksel
-seleccionar "ubuntu desktop"
 
 
 ### Pagina donde resulto la configuracion
