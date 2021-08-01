@@ -28,7 +28,7 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install lxde -y
 Se elige el lightdm
 
-###Instalar XFCE4, no se ocupara, se ocupara un GUI mas liviano
+### Instalar XFCE4, no se ocupara, se ocupara un GUI mas liviano
 sudo apt-get install xfce4 -y
 Se elige el lightdm
 
@@ -38,7 +38,7 @@ https://comtechies.com/how-to-set-up-gui-on-amazon-ec2-ubuntu-server.html
 sudo apt-add-repository ppa:x2go/stable (no es seguro, ya que es solo para ubuntu) https://www.addictivetips.com/ubuntu-linux-tips/set-up-x2go-on-linux/  (No aplicar)
 
 ###Instalacion de X2GOSERVER
-sudo apt-add-repository ppa:x2go/stable
+sudo apt-add-repository ppa:x2go/stable (No aplicar)
 sudo apt-get update
 sudo apt-get install x2goserver x2goserver-xsession -y => instalacion de X2GO en el servidor
 
@@ -72,7 +72,7 @@ instalar
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ´´´
 abrir VIM
-$echo $HOME => para ver la carpeta donde se instala el .vimrc
+:echo $HOME => para ver la carpeta donde se instala el .vimrc
 touch .vimrc
 copy and paste el VIMRC
 grabar y cerrar
