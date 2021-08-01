@@ -90,6 +90,10 @@ sudo apt-get install x2goclient
 # pip search packageName
 Extraccion de librerias pip freeze > requirements.txt
 Instalacion de librerias pip install -r requirements.txt
+pip install --upgrade pip
+pip install --upgrade virtualenv
+echo $PATH
+export PATH="<agregar la ruta>:$PATH"
 
 git --version => verificacion de instalacion de git
 https://sysads.co.uk/2014/02/03/connect-ubuntu-server-13-10-amazon-ec2-xrdp/
