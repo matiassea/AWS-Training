@@ -95,6 +95,14 @@ pip install --upgrade virtualenv
 echo $PATH
 export PATH="<agregar la ruta>:$PATH"
 
+### Descomprimir
+sudo apt install xz-utils
+tar -xf <file.tar.xz>
+-x means extract the archived file
+-f means following is the archived file name
+
+
+### GIT
 git --version => verificacion de instalacion de git
 https://sysads.co.uk/2014/02/03/connect-ubuntu-server-13-10-amazon-ec2-xrdp/
 
