@@ -1,7 +1,7 @@
 para crear instancia EC2
 Launch Instance
-Step 1: Choose AMI => Ubuntu Server 20.04 LTS (HVM), SSD Volume Type (Free tier elegible) Next
-Step 2: Choose an Instance Type => (Free tier elegible) Next
+Step 1: Choose AMI => Ubuntu Server 20.04 LTS (HVM), SSD Volume Type (Free tier elegible) => Next
+Step 2: Choose an Instance Type => (Free tier elegible) [t3a.xlarge] => Next
 Step 3: Configure Instance Details => Next
 Step 4: Add Storage => Next
 Step 5: Add Tags => Next
@@ -12,16 +12,15 @@ Escritorio remoto => RDP TCP 3389
 SSH => TCP 22
 HTTP => TCP 80
 HTTP => TCP 443
-Utilizar la llave o crear una nueva
+Utilizar la llave o crear una nueva, en putty debe ser en formato .ppk
 
 En Putty
 Session => "Host Name" => ubuntu@18.191.175.33
 Session => Puerto => 22
 connection => Seconds between keepalives => 180
-connection, data, auth => private key file for authentication (se adjunta llave en .ppk) 
+connection, SSH, Auth, Browser => private key file for authentication (se adjunta llave en .ppk) 
 
 ### Configuracion del EC2
-
 sudo apt-get update && sudo apt-get upgrade
 
 ###Instalar lxde, este se ocupara, asi en X2GO se selecciona LXDE
@@ -60,24 +59,42 @@ usuario es "ubuntu"
 sudo passwd ubuntu => marichiweu
 
 ###Programas
+
+##Install Python
 sudo apt-get install python3
 sudo apt-get install python3-pip -y
 sudo apt-get install firefox -y
-sudo apt-get install screenfetch -y o sudo pacman -S screenfetch
-ejecutar screenfetch
+pip install --upgrade pip
+pip install --upgrade virtualenv
 
-#Instalacion de VIM
-instalar
-´´´
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-´´´
-abrir VIM
-:echo $HOME => para ver la carpeta donde se instala el .vimrc
-touch .vimrc
-copy and paste el VIMRC
-grabar y cerrar
-abrir
-:PluginInstall
+
+##Install Screenfetch
+sudo apt-get install screenfetch -y o sudo pacman -S screenfetch
+ejecutar => screenfetch
+
+## Install Nodejs
+sudo apt install nodejs
+node -v
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+## Install npm
+sudo apt install npm
+npm -v
+sudo apt-get update && sudo apt-get upgrade
+
+## Install PM2
+sudo npm install pm2 -g
+pm2 -v
+pm2 ls => procesos que estan en ejecucion
+pm2 startup => Para iniciarse (se copia y pega el comando que sugiere este comando)
+
+## Install GIT
+sudo apt-get install git
+
+
+
+
+
 
 
 
