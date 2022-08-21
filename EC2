@@ -1,4 +1,4 @@
-para crear instancia EC2
+###  para crear instancia EC2
 Launch Instance
 Step 1: Choose AMI => Ubuntu Server 20.04 LTS (HVM), SSD Volume Type (Free tier elegible) => Next
 Step 2: Choose an Instance Type => (Free tier elegible) [t3a.xlarge] => Next
@@ -6,15 +6,33 @@ Step 3: Configure Instance Details => Next
 Step 4: Add Storage => Next
 Step 5: Add Tags => Next
 
+### Security Group
 Security group name=> Colocar nombre
 Configurar protocolo y puerto
 Escritorio remoto => RDP TCP 3389
 SSH => TCP 22
 HTTP => TCP 80
-HTTP => TCP 443
+HTTP => TCP 443 ::/0
+TCP 3000 0.0.0.0/0
+TCP 3389 0.0.0.0/0
+TCP 443 0.0.0.0/0
+TCP 80 ::/0
+TCP 22 ::/0
 Utilizar la llave o crear una nueva, en putty debe ser en formato .ppk
 
-En Putty
+### Tipo de servidores
+
+Server V25052022
+t3a.xlarge, 4 CPU , 8 GB memoria
+
+Server V200820022
+t3.large, 2 CPU, 8 GB memoria, GP2 20 GB
+
+En linux
+chmod 400 [llave .pem]
+ssh -i [llave .pem] admin@[IP publica]
+
+### En Putty
 Session => "Host Name" => ubuntu@18.191.175.33
 Session => Puerto => 22
 connection => Seconds between keepalives => 180
@@ -23,11 +41,13 @@ connection, SSH, Auth, Browser => private key file for authentication (se adjunt
 ### Configuracion del EC2
 sudo apt-get update && sudo apt-get upgrade
 
-###Instalar lxde, este se ocupara, asi en X2GO se selecciona LXDE
+### Interfaz grafica
+
+## Instalar lxde, este se ocupara, asi en X2GO se selecciona LXDE
 sudo apt-get install lxde -y
 Se elige el lightdm
 
-### Instalar XFCE4, no se ocupara, se ocupara un GUI mas liviano
+## Instalar XFCE4, no se ocupara, se ocupara un GUI mas liviano
 sudo apt-get install xfce4 -y
 Se elige el lightdm
 
@@ -36,17 +56,16 @@ sudo apt-get install xfce4 xfce4-goodies (No aplicar)
 https://comtechies.com/how-to-set-up-gui-on-amazon-ec2-ubuntu-server.html
 sudo apt-add-repository ppa:x2go/stable (no es seguro, ya que es solo para ubuntu) https://www.addictivetips.com/ubuntu-linux-tips/set-up-x2go-on-linux/  (No aplicar)
 
-###Instalacion de X2GOSERVER
+## Instalacion de X2GOSERVER
 sudo apt-add-repository ppa:x2go/stable (No aplicar)
 sudo apt-get update
 sudo apt-get install x2goserver x2goserver-xsession -y => instalacion de X2GO en el servidor
 
-### Por revisar
+## Por revisar
 https://stackoverflow.com/questions/25657596/how-to-set-up-gui-on-amazon-ec2-ubuntu-server
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-remote-desktop-with-x2go-on-ubuntu-20-04-es
 
-
-###Instalar XRDP => Escritorio remoto de microsoft
+## Instalar XRDP => Escritorio remoto de microsoft
 https://clouding.io/hc/es/articles/360010657540-C%C3%B3mo-instalar-y-configurar-XRDP-en-Ubuntu
 
 sudo apt-get install xrdp -y (solo si se quiere por escritorio remoto de windows)
@@ -54,23 +73,28 @@ sudo systemctl enable xrdp (No aplicar)
 sudo systemctl status xrdp (No aplicar)
 sudo shutdown -r now (No aplicar)
 
-###Creacion de passwordInstalar XRDP => Escritorio remoto de microsoft
+## Creacion de passwordInstalar XRDP => Escritorio remoto de microsoft
 usuario es "ubuntu"
 sudo passwd ubuntu => marichiweu
 
-###Programas
+### Programas
 
-##Install Python
+## Install Python
 sudo apt-get install python3
 sudo apt-get install python3-pip -y
 sudo apt-get install firefox -y
 pip install --upgrade pip
 pip install --upgrade virtualenv
 
+## Instalar Nano
+sudo apt-get -y install nano
 
-##Install Screenfetch
+## Install Screenfetch
 sudo apt-get install screenfetch -y o sudo pacman -S screenfetch
 ejecutar => screenfetch
+
+## Para instalar git
+sudo apt install git
 
 ## Install Nodejs
 sudo apt install nodejs
